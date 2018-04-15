@@ -6,7 +6,7 @@ import time, json
 def getAllFiles(dir):
     filesmap = {}
     for root, dirs, files in os.walk(dir):
-        filesmap[root] = files
+        filesmap[root.decode('gbk')] = files
     return filesmap
 
 def getOrgnames(recordFile):
